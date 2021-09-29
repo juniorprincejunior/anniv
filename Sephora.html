@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Surprise pour Estella</title>
+    
+</head>
+<body id="body">
+    <div style="display: flex; justify-content: center;"><h1 class="btn btn-outline-light">Surprise pour Estella</h1></div>
+    <div>
+        <div class="sup">
+            <h3 id="click">clique pour voir ta surprise</h3>
+            <img onclick="myfunc()" id="surprise" src="PngItem_3668111.png" alt="#">
+            <img id="second" src="/d5586dc04df058328219262cedc299ab-removebg-preview.png" alt="#"/>
+        </div>
+        <div id="first">
+            <h2 style="color: pink" >En ce jour est née une belle princesse, et heureusement elle est tombée amoureuse de moi et m’a fait sentir comme le gars le plus chanceux du monde. Alors je ferai tout pour Sa Majesté. Joyeux anniversaire, ma princesse !!!!!
+            </h2>
+            
+                    <div class="col text-center">
+                        <button onclick="myfunc1()" class="btn btn-success">click me</button>
+                    </div>
+  
+        </div> 
+
+        <div id="yoh">
+                <p style="text-align: center;">
+                    <iframe autoplay width="560" height="315" src="https://www.youtube.com/embed/tVKaN_H35xs;autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"  allowfullscreen></iframe>
+                </p>
+        </div>
+      
+     
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+<style>
+    body{
+        height: 100%;
+        
+    }
+
+    #body{
+        background-image: url('-LOVE-love-36983825-1680-1050.jpg');
+    }
+    #first{
+        display: none;
+        background: url('pp.jpg');
+        background-position: center;
+        background-size: cover;
+        opacity: 0.8;
+        border: 2px solid #ffff;
+        width: 80vw;
+        border-radius: 50px;
+        margin: 0 auto;
+        height: 100%;
+        padding: 30px;
+    }
+    h3{
+        color: rgb(4, 184, 255);
+        opacity: 1;
+    }
+    #second{
+        display: none;
+        width: 80vw;
+    }
+    #surprise{
+        text-align: center;
+        width: 300px;
+        cursor: pointer;
+    }
+    #click{
+        text-align: center;
+        color: red;
+        animation-name: cool;
+        animation-iteration-count: infinite;
+        animation-duration: 3s;
+    }
+    @keyframes cool {
+        from{opacity: 0.2; color: red;}
+        50%{opacity: 1; color: rgb(200, 255, 0);}
+        to{opacity: 0.2; color: red;}
+    }
+    .sup{
+        margin: 20vh 0 auto;
+        display: grid;
+        align-items: center;
+        justify-content: center;
+    }
+</style>
+<script>
+var audio = new Audio("DADJU - Reine (Clip Officiel).mp3");
+audio.currentTime = 0;	// Set audio play time from the beginning of audio
+document.getElementById('yoh').style='display:none';
+    function myfunc(){
+        audio.play();
+        document.getElementById('surprise').style='display: none';
+        document.getElementById('second').style='display: block;';
+        document.getElementById('click').style='display:none';
+        document.getElementById('yoh').style='display:none';
+        setTimeout(function(){ document.getElementById('second').style='display: none;'; document.getElementById('body').style='background-image:url(pp.jpg); background-repeat:no-repeat; background-size: 220% '; }, 50);
+        setTimeout(function(){ document.getElementById('first').style='display: block;'; }, 100);
+    }
+
+    function myfunc1(){
+        audio.play();
+        document.getElementById('surprise').style='display: none';
+        document.getElementById('second').style='display: none;';
+        document.getElementById('click').style='display:none';
+        document.getElementById('yoh').style='display:block';
+        setTimeout(function(){ document.getElementById('first').style='display: none;'; document.getElementById('body').style='background-image:url(pp.jpg); background-repeat:no-repeat; background-size: 220% '; }, 10);
+        setTimeout(function(){ document.getElementById('yoh').style='display: block;'; }, 10);
+    }
+</script>
+</body>
+</html>
